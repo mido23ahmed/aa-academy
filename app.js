@@ -74,24 +74,24 @@ const PRICING_DATA = {
       individual: "70$",
       oldIndividual: "115$",
       group: "55$",
-      subNote: "(أو ما يعادله 3,300 جنيه مصري)"
+      subNote: ""
     },
     pro: {
       individual: "90$",
       oldIndividual: "150$",
       group: "75$",
-      subNote: "(أو ما يعادله 4,300 جنيه مصري)"
+      subNote: ""
     },
     bundle: {
       individual: "145$",
       oldIndividual: "260$",
       group: "125$",
-      subNote: "(أو ما يعادله 7,100 جنيه مصري)"
+      subNote: ""
     },
     paymentMethods: [
-      "تحويل بنكي دولي",
+      "تحويل بنكي دولي (IBAN)",
       "ويسترن يونيون (Western Union)",
-      "الدفع بما يعادله بالدولار وقت التحويل"
+      "بطاقات الدفع والتحويلات الدولية"
     ]
   }
 };
@@ -220,13 +220,29 @@ function initStudentPortal() {
   const noticeEl = document.getElementById('portalNoticeText');
   const lockPortalBtn = document.getElementById('lockPortalBtn');
 
-  // جلب إعدادات المحاضرات من portal-config.js
+  // جلب إعدادات المحاضرات من portal-config.js مع وجود الـ 10 محاضرات كنسخة احتياطية مدمجة
+  const DEFAULT_LECTURES = [
+    { id: 1, title: "المحاضرة 1: واجهة الإكسيل وتنسيق الجداول الاحترافية", description: "التعرف على أدوات البرنامج، ضبط الواجهة، تصميم وتنسيق الجداول والقوائم المنسدلة (Data Validation) وتثبيت الرؤوس.", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true },
+    { id: 2, title: "المحاضرة 2: مدخل إلى الدوال وأنواعها والعمليات الأساسية", description: "فهم تركيبة الدوال، العمليات الحسابية، وتطبيق دوال الإحصاء والجمع الأساسية (SUM, AVERAGE, MIN, MAX, COUNT, COUNTA).", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true },
+    { id: 3, title: "المحاضرة 3: الدوال الشرطية وصناعة القرارات (IF Family)", description: "احتراف الدالة الشرطية IF البسيطة والمركبة، ودوال العد والجمع الشرطي (COUNTIF, COUNTIFS, SUMIF, SUMIFS, AVERAGEIFS).", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true },
+    { id: 4, title: "المحاضرة 4: ثورة دوال البحث والربط (VLOOKUP & XLOOKUP)", description: "شرح شامل لدوال البحث الرأسي والأفقي، وتطبيقات عملية متقدمة على أقوى دالة حديثة في الإكسيل XLOOKUP وطرق معالجة الأخطاء.", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true },
+    { id: 5, title: "المحاضرة 5: دوال النصوص والتواريخ ومعالجة البيانات", description: "دوال دمج النصوص وتجزئتها (TEXTSPLIT, CONCAT, TRIM, LEFT, RIGHT) ودوال التواريخ والأوقات وحساب مدد العمل والمستحقات.", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true },
+    { id: 6, title: "المحاضرة 6: التنسيق الشرطي المتقدم (Conditional Formatting)", description: "تمييز البيانات آلياً، إنشاء أشرطة التقدم وأيقونات التقييم، وتلوين الصفوف تلقائياً بناءً على شروط ومعادلات معقدة.", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true },
+    { id: 7, title: "المحاضرة 7: الرسوم البيانية التفاعلية (Data Visualization)", description: "تصميم جميع أنواع الـ Charts باحترافية، اختيار الرسم البياني المناسب لكل نوع بيانات، وتنسيق المخططات للعروض التقديمية.", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true },
+    { id: 8, title: "المحاضرة 8: الجداول المحورية السريعة (Pivot Tables)", description: "تحليل آلاف الصفوف في ثوانٍ، تجميع البيانات، حساب النسب، واستخدام الـ Slicers و Timelines لفلترة التقارير بشكل لحظي.", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true },
+    { id: 9, title: "المحاضرة 9: مقدمة الباور كويري (Power Query) وأتمتة الشغل", description: "استيراد البيانات من مصادر متعددة، تنظيف الداتا المشوهة بضغطة زر واحدة وتحديث الشيتات والتقارير آلياً.", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true },
+    { id: 10, title: "المحاضرة 10: المشروع العملي الشامل وبناء لوحة تحكم (Dashboard)", description: "ربط كل ما تعلمناه طوال الدورة في مشروع تخرّج متكامل، وتصميم داشبورد تفاعلية جاهزة للعرض على المديرين وأصحاب العمل.", videoUrl: "https://drive.google.com", sheetUrl: "https://drive.google.com", isAvailable: true }
+  ];
+
   const config = window.PORTAL_CONFIG || {
     CURRENT_PASSCODE: "AA2026",
-    CURRENT_BATCH_NAME: "الدفعة الحالية - كورس إكسيل",
-    NOTICE_TEXT: "المحاضرات متاحة للتحميل طوال فترة الكورس ولمدة 48 ساعة بعد انتهائه.",
-    LECTURES: []
+    CURRENT_BATCH_NAME: "الدفعة الحالية - كورس إكسيل الاحترافي",
+    NOTICE_TEXT: "تنبيه: التسجيلات وملفات العمل متاحة للتحميل طوال فترة الدورة ولمدة 48 ساعة بعد انتهائها كمرجع دائم لك على جهازك.",
+    LECTURES: DEFAULT_LECTURES
   };
+  if (!config.LECTURES || config.LECTURES.length === 0) {
+    config.LECTURES = DEFAULT_LECTURES;
+  }
 
   // تعبئة النصوص المبدئية
   if (batchNameEl) batchNameEl.textContent = config.CURRENT_BATCH_NAME;
