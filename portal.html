@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قاعة المحاضرات والملفات التدريبية | A.A Academy</title>
+  
+  <meta name="description" content="قاعة المشتركين الرسمية لتحميل تسجيلات الـ 10 محاضرات وشيتات العمل المرفقة لكورس مايكروسوفت إكسيل مع أ. أحمد علاء.">
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .portal-standalone-wrap {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header for Portal -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar" style="justify-content: space-between;">
+        <a href="index.html" class="brand">
+          <img src="Logo.png" alt="A.A Academy" class="brand-logo">
+          <div class="brand-text">
+            <span class="brand-name">A.A <span>ACADEMY</span></span>
+            <span class="brand-sub">بوابة الطلاب والمحاضرات</span>
+          </div>
+        </a>
+        <a href="index.html" class="btn btn-secondary btn-sm">
+          ⬅️ العودة للرئيسية
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Portal Container -->
+  <main class="portal-standalone-wrap">
+    <div class="container">
+      
+      <div class="section-header" style="margin-bottom: 35px;">
+        <span class="section-tag">🔐 منطقة المشتركين فقط</span>
+        <h1 class="section-title">قاعة المحاضرات <span>وتحميل الملفات</span></h1>
+        <p class="section-subtitle">أدخل رمز المرور السري الخاص بمجموعتك للوصول لروابط تسجيلات الـ 10 محاضرات وملفات الإكسيل العملية.</p>
+      </div>
+
+      <div class="portal-box" style="max-width: 950px; margin: 0 auto;">
+        
+        <!-- View 1: Password Lock Gate -->
+        <div class="portal-lock-view" id="portalLockView">
+          <div class="lock-icon-wrap">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h2 class="lock-title">قاعة المحاضرات مقفولة</h2>
+          <p class="lock-desc">يرجى كتابة كلمة السر التي استلمتها من أستاذ أحمد علاء لتسجيل الدخول.</p>
+
+          <form id="passcodeForm" class="password-form" autocomplete="off">
+            <input type="password" id="passcodeInput" class="password-input" placeholder="اكتب كلمة السر هنا..." required autofocus>
+            <button type="submit" class="btn btn-primary btn-lg">
+              فتح القاعة 🔓
+            </button>
+          </form>
+
+          <p class="password-error-msg" id="passcodeError"></p>
+
+          <div class="lock-help" style="margin-top: 25px;">
+            <span>مشترك ومعاكش الباسورد؟ </span>
+            <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D8%B4%D8%AA%D8%B1%D9%83%20%D9%88%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A8%D8%A7%D8%B3%D9%88%D8%B1%D8%AF%20%D8%A7%D9%84%D9%82%D8%A7%D8%B9%D8%A9" target="_blank" rel="noopener noreferrer">تواصل عبر واتساب فوراً</a>
+          </div>
+        </div>
+
+        <!-- View 2: Unlocked Classroom -->
+        <div class="portal-classroom-view" id="portalClassroomView">
+          <div class="classroom-header">
+            <div class="classroom-title">
+              <h3>قاعة المحاضرات التدريبية</h3>
+              <p id="portalBatchName">الدفعة الحالية - كورس إكسيل الاحترافي</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="lockPortalBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              قفل القاعة والخروج
+            </button>
+          </div>
+
+          <div class="portal-notice-banner" id="portalNoticeBanner">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <span id="portalNoticeText">تنبيه: التسجيلات وملفات العمل متاحة للتحميل طوال فترة الدورة ولمدة 48 ساعة بعد انتهائها كمرجع دائم لك على جهازك.</span>
+          </div>
+
+          <div class="lectures-list" id="lecturesList">
+            <!-- Dynamic Lectures List -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" style="padding: 30px 0; margin-top: 40px;">
+    <div class="container text-center" style="text-align: center;">
+      <p style="color: var(--text-dim); font-size: 0.9rem;">
+        جميع الحقوق محفوظة &copy; 2026 <strong>A.A Academy &bull; Ahmed Alaa</strong>
+      </p>
+    </div>
+  </footer>
+
+  <script src="portal-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
