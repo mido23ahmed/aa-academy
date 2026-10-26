@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>A.A Academy | أكاديمية أحمد علاء لاحتراف مايكروسوفت إكسيل</title>
   
   <!-- Meta & SEO Tags -->
@@ -10,13 +10,33 @@
   <meta name="keywords" content="إكسيل, تعليم إكسيل, كورس إكسيل للمبتدئين, كورس إكسيل للمحترفين, شيتات إكسيل, أحمد علاء, A.A Academy, Pivot Tables, Power Query, Dashboards">
   <meta name="author" content="Ahmed Alaa">
   
+  <!-- Mobile & Apple iOS / Android Theme Tags -->
+  <meta name="theme-color" content="#070B12">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="A.A Academy">
+  <meta name="format-detection" content="telephone=no">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="apple-touch-icon" href="Logo.png">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- =========================================================================
+       Top Announcement Bar (Free Gift Direct WhatsApp)
+       ========================================================================= -->
+  <div class="top-gift-bar">
+    <div class="container top-gift-flex">
+      <span>🎁 <strong>هدية زوار الأكاديمية:</strong> احصل على ملف أهم 100 اختصار إكسيل احترافي مجاناً لتسريع عملك!</span>
+      <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D9%83%D9%88%D8%B1%D8%B3%20%D8%A7%D9%84%D8%A5%D9%83%D8%B3%D9%8A%D9%84%20%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D9%85" target="_blank" rel="noopener noreferrer" class="top-gift-btn">
+        استلم هديتك عبر واتساب ⚡
+      </a>
+    </div>
+  </div>
 
   <!-- =========================================================================
        Header & Navigation
@@ -34,24 +54,35 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
+        <!-- Desktop & Mobile Navigation Links -->
         <ul class="nav-links" id="navLinks">
           <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
           <li><a href="#features" class="nav-link">لماذا نحن؟</a></li>
-          <li><a href="#courses" class="nav-link">الكورسات</a></li>
-          <li><a href="#pricing" class="nav-link">الأسعار والعروض</a></li>
+          <li><a href="#courses" class="nav-link" style="color: var(--gold-light); font-weight: 700;">عروض الأسعار 🔥</a></li>
+          <li><a href="#vba-genius" class="nav-link" style="color: var(--emerald-bright); font-weight: 700;">برنامج VBA Genius ⚡</a></li>
           <li><a href="#custom-sheets" class="nav-link">شيتات مخصصة</a></li>
           <li><a href="#social" class="nav-link">منصاتنا</a></li>
-          <li><a href="#portal" class="nav-link">بوابة الطلاب 🔐</a></li>
+          
+          <!-- Mobile Drawer Action Buttons (Visible only inside mobile drawer) -->
+          <li class="mobile-drawer-cta">
+            <a href="#portal" class="btn btn-portal btn-md" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              قاعة المحاضرات والملفات 🔐
+            </a>
+            <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D9%83%D9%88%D8%B1%D8%B3%20%D8%A7%D9%84%D8%A5%D9%83%D8%B3%D9%8A%D9%84%20%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D9%85" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-md" style="width: 100%;">
+              💬 تواصل فوري عبر واتساب
+            </a>
+          </li>
         </ul>
 
         <!-- Navigation Actions -->
         <div class="nav-actions">
           <a href="#portal" class="btn btn-portal btn-sm">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
             قاعة المحاضرات
           </a>
           <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D9%83%D9%88%D8%B1%D8%B3%20%D8%A7%D9%84%D8%A5%D9%83%D8%B3%D9%8A%D9%84%20%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D9%85" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/></svg>
             تواصل واتساب
           </a>
           <button class="mobile-toggle" id="mobileMenuToggle" aria-label="فتح القائمة">
@@ -92,7 +123,7 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="#pricing" class="btn btn-gold btn-lg">
+            <a href="#offers" class="btn btn-gold btn-lg">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               احجز مقعدك بخصم 40%
             </a>
@@ -159,6 +190,28 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Free Gift (Lead Magnet) Strip - Prominently Located Under Hero
+       ========================================================================= -->
+  <section class="section" id="gift" style="padding: 20px 0 40px;">
+    <div class="container">
+      <div class="gift-banner">
+        <div class="gift-content">
+          <div class="gift-icon-box">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v10H4V12"></path><path d="M2 7h20v5H2z"></path><path d="M12 22V7"></path><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+          </div>
+          <div class="gift-text">
+            <h3>هدية مجانية لجميع زوار الأكاديمية: ملف اختصارات الإكسيل 🎁</h3>
+            <p>حمّل الآن مجاناً: <strong>الدليل الشامل لأهم اختصارات مايكروسوفت إكسيل الأساسية والاحترافية</strong> لتوفير الوقت ومضاعفة سرعة إنجاز عملك اليومي.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%84%D9%85%20%D9%85%D9%84%D9%81%20%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A5%D9%83%D8%B3%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg">
+          استلم ملف الاختصارات مجاناً 📥
+        </a>
       </div>
     </div>
   </section>
@@ -265,6 +318,10 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>الجداول المحورية (Pivot Tables) لتلخيص التقارير السريعة بنقرة زر.</span>
             </li>
+            <li style="color: var(--gold-light); font-weight: 700;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>🎁 هدية مجانية فورية: برنامج VBA Genius Pro للكمبيوتر مدى الحياة!</span>
+            </li>
           </ul>
 
           <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%83%D9%88%D8%B1%D8%B3%20%D8%A7%D9%84%D8%A5%D9%83%D8%B3%D9%84%20%D9%84%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86%20%D8%A8%D8%A7%D9%84%D8%B9%D8%B1%D8%B6" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
@@ -314,6 +371,10 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>تركات وخبايا متقدمة في الإكسل توفر عليك ساعات طويلة من الشغل اليومي.</span>
             </li>
+            <li style="color: var(--gold-light); font-weight: 700;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>🎁 هدية مجانية فورية: برنامج VBA Genius Pro للكمبيوتر مدى الحياة!</span>
+            </li>
           </ul>
 
           <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%83%D9%88%D8%B1%D8%B3%20%D8%A7%D9%84%D8%A5%D9%83%D8%B3%D9%84%20%D9%84%D9%84%D9%85%D8%AD%D8%AA%D8%B1%D9%81%D9%8A%D9%86%20%D8%A8%D8%A7%D9%84%D8%B9%D8%B1%D8%B6" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
@@ -361,6 +422,10 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>شهادة إتمام معتمدة بعد إنجاز المشروع النهائي.</span>
             </li>
+            <li style="color: #fbbf24; font-weight: 800;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>👑 هدية VIP فورية: برنامج VBA Genius Pro كامل مدى الحياة + كود التفعيل!</span>
+            </li>
           </ul>
 
           <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84%D8%A9%20(20%20%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A9)" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block">
@@ -377,10 +442,12 @@
        ========================================================================= -->
   <section class="section pricing-section" id="pricing">
     <div class="container">
+      
+      <!-- Section Header -->
       <div class="section-header">
-        <span class="section-tag">🏷️ خطط الأسعار والعروض</span>
-        <h2 class="section-title">استفد من <span>عرض العودة (خصم 40%)</span></h2>
-        <p class="section-subtitle">أسعار تنافسية خاصة لفترة محدودة للأفراد والمجموعات مع خيارات دفع مرنة ومتعددة.</p>
+        <span class="section-tag">💳 جداول الأسعار الرسمية</span>
+        <h2 class="section-title">اختر <span>باقتك التدريبية المناسبة</span> واشترك الآن</h2>
+        <p class="section-subtitle">أسعار واضحة بدون أي مصاريف خفية، مع دعم فوري لتحويل العملات وخيارات دفع سهلة وسريعة.</p>
       </div>
 
       <!-- Pricing Cards Grid -->
@@ -423,6 +490,10 @@
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>متابعة وتصحيح التطبيقات العملية خطوة بخطوة</span>
+            </li>
+            <li style="color: var(--gold-light); font-weight: 700;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>🎁 هدية مجانية: برنامج VBA Genius Pro للكمبيوتر مدى الحياة</span>
             </li>
           </ul>
 
@@ -469,6 +540,10 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>شيتات مشاريع حقيقية متقدمة وقوالب جاهزة للاستخدام</span>
             </li>
+            <li style="color: var(--gold-light); font-weight: 700;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>🎁 هدية مجانية: برنامج VBA Genius Pro للكمبيوتر مدى الحياة</span>
+            </li>
           </ul>
 
           <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%83%D9%88%D8%B1%D8%B3%20%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D8%B1%D9%81%D9%8A%D9%86%20%D8%A8%D8%B3%D8%B9%D8%B1%20%D8%A7%D9%84%D8%B9%D8%B1%D8%B6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
@@ -514,6 +589,10 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>شهادة تخرج معتمدة من A.A Academy</span>
             </li>
+            <li style="color: #fbbf24; font-weight: 800;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>👑 هدية VIP: برنامج VBA Genius Pro كامل مدى الحياة + كود التفعيل</span>
+            </li>
           </ul>
 
           <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84%D8%A9%20%D8%A8%D8%B3%D8%B9%D8%B1%20%D8%A7%D9%84%D8%AE%D8%B5%D9%85" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block">
@@ -536,6 +615,372 @@
           <span class="pay-badge">✓ وي باي (WE Pay)</span>
           <span class="pay-badge">✓ تحويل بنكي مباشر</span>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VBA Genius Pro - Software Showcase & Live Interactive Simulator
+       ========================================================================= -->
+  <section class="section vba-genius-section" id="vba-genius">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">⚡ أداة الذكاء الاصطناعي الحصرية لمستخدمي إكسيل</span>
+        <h2 class="section-title">برنامج <span>VBA Genius Pro</span> المساعد الذكي</h2>
+        <p class="section-subtitle">تطوير: م/ أحمد علاء — اكتب، فتش، وأصلح أكواد الماكرو في ثوانٍ معدودة بدون أي خبرة سابقة في البرمجة! جرب النسخة الحية على الموقع مباشرة الآن:</p>
+      </div>
+
+      <!-- Free Gift Announcement Banner -->
+      <div class="vba-gift-hero-banner" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.16) 0%, rgba(16, 185, 129, 0.16) 100%); border: 1.5px solid rgba(245, 158, 11, 0.45); border-radius: 16px; padding: 18px 24px; margin-bottom: 28px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;">
+          <span style="background: #F59E0B; color: #0b1120; font-weight: 900; font-size: 0.85rem; padding: 5px 14px; border-radius: 9999px; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);">🎁 مفاجأة وهدية خاصة</span>
+          <span style="color: #fff; font-size: 1.05rem; font-weight: 700;">
+            احصل على <strong>النسخة الكاملة للكمبيوتر مدى الحياة مجاناً 100%</strong> فور اشتراكك في أي كورس من كورسات الإكسل!
+          </span>
+          <a href="#courses" class="btn btn-gold btn-sm" style="padding: 7px 18px; font-size: 0.85rem;">اشترك الآن واستلم هديتك ⚡</a>
+        </div>
+      </div>
+
+      <!-- Live Desktop App Mockup Sandbox -->
+      <div class="vba-window-mockup">
+        
+        <!-- OS Title Bar -->
+        <div class="vba-os-titlebar">
+          <div class="vba-os-dots">
+            <span class="vba-os-dot red"></span>
+            <span class="vba-os-dot yellow"></span>
+            <span class="vba-os-dot green"></span>
+          </div>
+          <div class="vba-os-title">
+            <span>(تطوير: م/ أحمد علاء) VBA عبقري الـ — VBA Genius Pro</span>
+          </div>
+          <div style="font-size: 0.75rem; color: #64748b;">v2.6 Desktop Edition</div>
+        </div>
+
+        <!-- App Inside Header -->
+        <div class="vba-app-header">
+          <div class="vba-app-brand">
+            <img src="Logo.png" alt="A.A Logo" class="vba-app-logo">
+            <div class="vba-app-titles">
+              <h3>VBA Genius Pro <span class="vba-pro-badge">PRO</span></h3>
+              <p>المساعد الذكي لمستخدمي إكسل — تطوير: م/ أحمد علاء (Ahmed Alaa)</p>
+            </div>
+          </div>
+
+          <div class="vba-app-actions">
+            <div class="vba-trial-counter" id="vbaTrialCounterBox">
+              <span id="vbaTrialStatusIcon">⚡</span>
+              <span id="vbaTrialCounterLabel">متبقي</span>
+              <span id="vbaTrialCounterVal">5</span>
+              <span id="vbaTrialUnitLabel">محاولات مجانية</span>
+            </div>
+            <button class="vba-activate-btn-top" id="vbaOpenActivationModalBtn" onclick="openVbaActivationModal()" style="background: rgba(245, 158, 11, 0.18); border: 1px solid rgba(245, 158, 11, 0.5); color: #fbbf24; font-family: inherit; font-size: 0.82rem; font-weight: 700; padding: 7px 14px; border-radius: 9999px; cursor: pointer; transition: 0.2s;" title="أدخل كود تفعيل البرنامج أو باسورد الكورس">
+              🔑 كود التفعيل
+            </button>
+            <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AC%D8%B1%D8%A8%D8%AA%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20VBA%20Genius%20Pro%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%88%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%AD%D8%B5%D9%84%20%D8%B9%D9%84%D9%89%20%D9%86%D8%B3%D8%AE%D8%AA%D9%8A%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%85%D8%B9%20%D8%A7%D9%84%D9%83%D9%88%D8%B1%D8%B3%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5" target="_blank" rel="noopener noreferrer" class="vba-buy-btn-top">
+              💬 طلب الترخيص
+            </a>
+          </div>
+        </div>
+
+        <!-- App Body (Sidebar Tabs + Workspace) -->
+        <div class="vba-app-body">
+          
+          <!-- Sidebar Menu (RTL Right side) -->
+          <div class="vba-sidebar">
+            <button class="vba-tab-btn active" data-vba-tab="library">
+              <span>📚</span>
+              <span>مكتبة الأكواد الجاهزة (100% أوفلاين)</span>
+            </button>
+            <button class="vba-tab-btn" data-vba-tab="generator">
+              <span>⚡</span>
+              <span>توليد كود جديد مخصص</span>
+            </button>
+            <button class="vba-tab-btn" data-vba-tab="fixer">
+              <span>🔧</span>
+              <span>مصلح ومدقق الأخطاء</span>
+            </button>
+            <button class="vba-tab-btn" data-vba-tab="explainer">
+              <span>📖</span>
+              <span>شرح الكود بالعربي المبسط</span>
+            </button>
+            <button class="vba-tab-btn" data-vba-tab="converter">
+              <span>➡️</span>
+              <span>تحويل معادلة إكسيل لماكرو</span>
+            </button>
+            <button class="vba-tab-btn" data-vba-tab="speed">
+              <span>🩺</span>
+              <span>فاحص سرعة وصحة الكود</span>
+            </button>
+            <button class="vba-tab-btn gold-tab" data-vba-tab="buy">
+              <span>👑</span>
+              <span>شراء وتفعيل مدى الحياة</span>
+            </button>
+          </div>
+
+          <!-- Workspace -->
+          <div class="vba-workspace">
+            
+            <!-- View 1: Ready Codes Library (Matches Desktop Screenshot) -->
+            <div class="vba-view-tab active" id="vba-view-library">
+              <div class="vba-work-header">
+                <div class="vba-work-title">
+                  <span>📚 مكتبة الأكواد الجاهزة (تعمل أوفلاين 100%)</span>
+                </div>
+                <p class="vba-work-subtitle">
+                  أكواد إكسل مختبرة ومعتمدة من المحترفين لأكثر المهام شيوعاً. جاهزة للنسخ أو التصدير المباشر بدون إنترنت.
+                </p>
+
+                <div class="vba-search-row">
+                  <input type="text" id="vbaSearchInput" class="vba-search-input" placeholder="🔍 ابحث في مكتبة الأكواد (مثال: دمج، واتساب، حذف، PDF، أوتلوك)...">
+                  <select id="vbaFilterSelect" class="vba-filter-select">
+                    <option value="all">كل الأقسام</option>
+                    <option value="messaging">التصدير والمراسلة</option>
+                    <option value="accounting">المحاسبة والترحيل</option>
+                    <option value="sheets">أوراق العمل (Sheets)</option>
+                    <option value="cleaning">تنظيف البيانات</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Cards Grid (Generated dynamically by JS) -->
+              <div class="vba-cards-grid" id="vbaCardsGrid">
+                <!-- 6 cards generated from vba-genius-data.js -->
+              </div>
+            </div>
+
+            <!-- View 2: Live AI Code Generator -->
+            <div class="vba-view-tab" id="vba-view-generator">
+              <div class="vba-work-header">
+                <div class="vba-work-title">
+                  <span>⚡ توليد كود جديد مخصص عبر الذكاء الاصطناعي</span>
+                </div>
+                <p class="vba-work-subtitle">
+                  اكتب متطلباتك باللغة العربية البسيطة وسيقوم البرنامج بتوليد كود VBA كامل ومنظم مع شرح لكل سطر!
+                </p>
+              </div>
+
+              <div class="vba-generator-box">
+                <label style="color:#cbd5e1; font-size:0.88rem; font-weight:700; margin-bottom:8px; display:block;">
+                  اضغط على أحد الأمثلة السريعة للتجربة:
+                </label>
+                <div class="vba-chips-row">
+                  <span class="vba-prompt-chip">💡 مثال: ترحيل الفواتير لشيت الأرشيف تلقائياً</span>
+                  <span class="vba-prompt-chip">💡 مثال: إرسال رسائل واتساب مع نص مخصص</span>
+                  <span class="vba-prompt-chip">💡 مثال: دمج جميع الشيتات في شيت واحد</span>
+                  <span class="vba-prompt-chip">💡 مثال: قفل وحماية كل الشيتات بباسورد</span>
+                </div>
+
+                <textarea id="vbaPromptInput" class="vba-prompt-textarea" placeholder="اكتب ما تريد أن يفعله الكود في الإكسيل هنا (مثال: أريد كود لترحيل بيانات الفاتورة إلى شيت الأرشيف ومسح الخلايا)..."></textarea>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+                  <button class="btn btn-primary btn-md" id="vbaGenerateBtn">
+                    ⚡ توليد الكود الآن ✨
+                  </button>
+                  <span style="font-size:0.8rem; color:#94a3b8;">
+                    🔒 النسخة الحرة للموقع تمنحك حتى 15 تجربة مجانية.
+                  </span>
+                </div>
+
+                <!-- Result Box -->
+                <div id="vbaGenResult" style="display:none; margin-top:20px; border-top:1px solid rgba(255,255,255,0.08); padding-top:16px;">
+                  <h4 id="vbaGenTitle" style="color:#34d399; margin-bottom:10px; font-size:1.05rem;"></h4>
+                  <pre id="vbaGenCode" class="vba-code-body" style="border-radius:10px; max-height:240px; margin-bottom:12px;"></pre>
+                  <button class="vba-btn-sub primary" onclick="navigator.clipboard.writeText(document.getElementById('vbaGenCode').textContent); showToast('تم نسخ الكود المولد بنجاح! 📋');">
+                    📋 نسخ الكود المولد
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 3: Error Fixer -->
+            <div class="vba-view-tab" id="vba-view-fixer">
+              <div class="vba-work-header">
+                <div class="vba-work-title">
+                  <span>🔧 مدقق ومصلح أخطاء الـ VBA والـ Runtime Errors</span>
+                </div>
+                <p class="vba-work-subtitle">
+                  توقف عن الحيرة أمام رسائل أخطاء الإكسيل المزعجة! يكتشف البرنامج سبب العطل ويصلحه في جزء من الثانية.
+                </p>
+              </div>
+
+              <div class="vba-generator-box">
+                <label style="color:#f87171; font-size:0.88rem; font-weight:700; margin-bottom:8px; display:block;">
+                  ⚠️ نموذج لكود به خطأ برمجي شائع (Compile Error: Block If without End If):
+                </label>
+                <pre class="vba-code-body" style="border-radius:10px; max-height:160px; margin-bottom:14px; border:1px solid rgba(239,68,68,0.4); color:#fca5a5;">Sub CalculateBonus()
+    Dim i As Long
+    For i = 2 To 100
+        If Cells(i, 2).Value > 50000 Then
+            Cells(i, 3).Value = Cells(i, 2).Value * 0.1
+    Next i  ' ❌ خطأ: عدم إغلاق جملة الشرط End If
+End Sub</pre>
+
+                <button class="btn btn-primary btn-md" id="vbaRunFixBtn">
+                  فحص وتصليح الخطأ المكتشف 🛠️
+                </button>
+
+                <!-- Fixed Result -->
+                <div id="vbaFixResult" style="display:none; margin-top:20px; border-top:1px solid rgba(255,255,255,0.08); padding-top:16px;">
+                  <div style="background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); padding:12px; border-radius:8px; color:#34d399; font-size:0.88rem; margin-bottom:12px;">
+                    ✅ <strong>التقرير التشخيصي:</strong> تم رصد نقص في إغلاق جملة (If Then) قبل نهاية الحلقة التكرارية (Next i). تم تصحيح الكود بالكامل بنجاح.
+                  </div>
+                  <pre class="vba-code-body" style="border-radius:10px; max-height:220px; border:1px solid rgba(16,185,129,0.4); color:#6ee7b7;">Sub CalculateBonus()
+    Dim i As Long
+    For i = 2 To 100
+        If Cells(i, 2).Value > 50000 Then
+            Cells(i, 3).Value = Cells(i, 2).Value * 0.1
+        End If ' ✅ تم التصليح التلقائي بواسطة VBA Genius Pro
+    Next i
+    MsgBox "تم حساب المكافآت بنجاح لجميع الموظفين!", vbInformation, "VBA Genius Pro"
+End Sub</pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 4: Arabic Explainer -->
+            <div class="vba-view-tab" id="vba-view-explainer">
+              <div class="vba-work-header">
+                <div class="vba-work-title">
+                  <span>📖 شرح الكود باللغة العربية المبسطة</span>
+                </div>
+                <p class="vba-work-subtitle">
+                  يحول المساعد الذكي أي كود ماكرو معقد باللغة الإنجليزية إلى شرح عربي وافي يوضح وظيفة كل سطر وكيف يعمل داخل الإكسيل.
+                </p>
+              </div>
+
+              <div class="vba-generator-box">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                  <div>
+                    <h5 style="color:#38bdf8; margin-bottom:8px;">كود الـ VBA:</h5>
+                    <pre class="vba-code-body" style="border-radius:10px; font-size:0.82rem; height:190px;">Sub RefreshAllPivotTables()
+    Dim pc As PivotCache
+    For Each pc In ThisWorkbook.PivotCaches
+        pc.Refresh
+    Next pc
+    MsgBox "تم تحديث كافة الجداول!", vbInformation
+End Sub</pre>
+                  </div>
+                  <div>
+                    <h5 style="color:#34d399; margin-bottom:8px;">الشرح العربي الفوري:</h5>
+                    <div style="background:#060a12; border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:12px; font-size:0.84rem; line-height:1.6; height:190px; overflow-y:auto; color:#cbd5e1;">
+                      <p>1. <strong>PivotCache:</strong> يعلن عن متغير يمثل ذاكرة التخزين المؤقتة للجداول المحورية.</p>
+                      <p>2. <strong>For Each Loop:</strong> يمر على كل بيفوت تيبل موجود في ملف العمل بدون استثناء.</p>
+                      <p>3. <strong>pc.Refresh:</strong> يرسل أمر التحديث اللحظي لجميع الحسابات.</p>
+                      <p>4. <strong>MsgBox:</strong> يظهر إشعاراً مرئياً لراحة المستخدم بتأكيد اكتمال العملية بنجاح.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 5: Converter -->
+            <div class="vba-view-tab" id="vba-view-converter">
+              <div class="vba-work-header">
+                <div class="vba-work-title">
+                  <span>➡️ تحويل معادلات الإكسيل إلى ماكرو فائق السرعة</span>
+                </div>
+                <p class="vba-work-subtitle">
+                  تخلص من ثقل وتجمد ملفات الإكسيل بسبب كثرة معادلات XLOOKUP و SUMIFS بتحويلها لكود ماكرو يحسب القيم ويكتب النتائج الثابتة فقط!
+                </p>
+              </div>
+
+              <div class="vba-generator-box" style="text-align:center; padding:35px 20px;">
+                <div style="font-size:2.8rem; margin-bottom:12px;">⚡</div>
+                <h4 style="color:#fff; font-size:1.15rem; margin-bottom:8px;">خاصية حصرية في النسخة الكاملة Desktop Pro</h4>
+                <p style="color:#94a3b8; max-width:550px; margin:0 auto 20px; font-size:0.88rem;">
+                  تتيح لك إدخال أي معادلة إكسيل (مثل VLOOKUP أو IF المركبة) ويقوم البرنامج بتحويلها إلى كود VBA ينفذ العمليات في أجزاء من الثانية ويحمي معادلاتك من العبث.
+                </p>
+                <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%85%D9%86%20VBA%20Genius%20Pro" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-md">
+                  اطلب النسخة الكاملة الآن 👑
+                </a>
+              </div>
+            </div>
+
+            <!-- View 6: Speed Check -->
+            <div class="vba-view-tab" id="vba-view-speed">
+              <div class="vba-work-header">
+                <div class="vba-work-title">
+                  <span>🩺 فاحص سرعة وصحة الكود (Code Optimizer)</span>
+                </div>
+                <p class="vba-work-subtitle">
+                  يقوم بحقن أوامر التسريع التلقائية (ScreenUpdating, Calculation, EnableEvents) ليجعل تشغيل الماكرو أسرع حتى 20 ضعفاً!
+                </p>
+              </div>
+
+              <div class="vba-generator-box" style="text-align:center; padding:35px 20px;">
+                <div style="font-size:2.8rem; margin-bottom:12px;">🚀</div>
+                <h4 style="color:#fff; font-size:1.15rem; margin-bottom:8px;">تسريع تنفيذ الماكرو لآلاف الصفوف</h4>
+                <p style="color:#94a3b8; max-width:550px; margin:0 auto 20px; font-size:0.88rem;">
+                  يفحص الكود ويمنع استهلاك الذاكرة، ويزيل الأوامر البطيئة مثل Select و Activate ليعمل الكود في الخلفية بنعومة فائقة.
+                </p>
+                <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20VBA%20Genius%20Pro" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-md">
+                  تفعيل البرنامج للكمبيوتر 🚀
+                </a>
+              </div>
+            </div>
+
+            <!-- View 7: Buy Full Lifetime License -->
+            <div class="vba-view-tab" id="vba-view-buy">
+              <div class="vba-work-header">
+                <div class="vba-work-title" style="color:#fbbf24;">
+                  <span>👑 شراء وتفعيل النسخة الكاملة مدى الحياة (Desktop Edition)</span>
+                </div>
+                <p class="vba-work-subtitle">
+                  امتلك برنامجك الخاص على جهاز الكمبيوتر للعمل بدون إنترنت مدى الحياة وبدون أي اشتراكات دورية.
+                </p>
+              </div>
+
+              <div class="vba-generator-box" style="text-align:center; padding:30px 20px; border:1px solid rgba(245,158,11,0.4);">
+                <div style="font-size:3rem; margin-bottom:10px;">💎</div>
+                <h3 style="color:#fff; font-size:1.4rem; margin-bottom:8px;">عرض الإطلاق الحصري للنسخة الاحترافية</h3>
+                <p style="color:#cbd5e1; max-width:600px; margin:0 auto 20px; font-size:0.95rem;">
+                  تفعيل دائم على جهازك + دعم فني وتحديثات مستمرة ومباشرة من مطور البرنامج م/ أحمد علاء.
+                </p>
+                <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B4%D8%AA%D8%B1%D9%8A%20%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%85%D9%86%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20VBA%20Genius%20Pro%20%D9%88%D9%83%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D9%81%D8%B9%D9%8A%D9%84%20%D9%85%D8%AF%D9%89%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  تواصل عبر واتساب لشراء كود التفعيل فوراً
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Feature Values Grid under mockup -->
+      <div class="vba-pro-value-grid">
+        <div class="vba-val-card">
+          <h4><span>💻</span> يعمل 100% أوفلاين بدون إنترنت</h4>
+          <p>تطبيق ديسكتوب خفيف وسريع على جهاز الكمبيوتر الخاص بك، لا يتطلب أي اتصال بالإنترنت أو اشتراكات متجددة.</p>
+        </div>
+
+        <div class="vba-val-card">
+          <h4><span>⚡</span> توليد وتصليح لا نهائي</h4>
+          <p>أنتج آلاف الأكواد البرمجية لحساباتك وشركاتك دون سقف أو حدود للاستخدام، مع توفير ساعات طويلة من العمل اليدوي.</p>
+        </div>
+
+        <div class="vba-val-card">
+          <h4><span>🛡️</span> معتمد وخالٍ من الأخطاء</h4>
+          <p>أكواد مختبرة ومحمية لا تسبب أي ضرر لبيانات الشيت أو بطء في حسابات ملفات الإكسيل الضخمة.</p>
+        </div>
+
+        <div class="vba-val-card">
+          <h4><span>📞</span> دعم فني مباشر من أ. أحمد علاء</h4>
+          <p>مساعدة شخصية مباشرة في تعديل الأكواد وتطبيقها على ملفاتك الخاصة بعد شراء البرنامج لضمان نجاحك 100%.</p>
+        </div>
+      </div>
+
+      <!-- Big Call to Action Box -->
+      <div class="vba-cta-box">
+        <h3>🚀 ابدأ أتمتة شغلك ووفر 90% من وقتك في الإكسيل!</h3>
+        <p>لا تدع كتابة الأكواد تقف عائقاً أمامك. اطلب نسختك الدائمة من برنامج VBA Genius Pro الآن وانضم لمحترفي أتمتة الإكسيل في الوطن العربي.</p>
+        <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AC%D8%B1%D8%A8%D8%AA%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20VBA%20Genius%20Pro%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%88%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B4%D8%AA%D8%B1%D9%8A%20%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%84%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg">
+          طلب النسخة الكاملة وكود التفعيل عبر واتساب 💬
+        </a>
       </div>
 
     </div>
@@ -724,28 +1169,6 @@
   </section>
 
   <!-- =========================================================================
-       Free Gift (Lead Magnet) Strip
-       ========================================================================= -->
-  <section class="section" id="gift" style="padding-top: 0;">
-    <div class="container">
-      <div class="gift-banner">
-        <div class="gift-content">
-          <div class="gift-icon-box">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v10H4V12"></path><path d="M2 7h20v5H2z"></path><path d="M12 22V7"></path><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
-          </div>
-          <div class="gift-text">
-            <h3>هدية مجانية لجميع زوار الأكاديمية: ملف اختصارات الإكسيل 🎁</h3>
-            <p>حمّل الآن مجاناً: <strong>الدليل الشامل لأهم اختصارات مايكروسوفت إكسيل الأساسية والاحترافية</strong> لتوفير الوقت ومضاعفة سرعة إنجاز عملك اليومي.</p>
-          </div>
-        </div>
-        <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%84%D9%85%20%D9%85%D9%84%D9%81%20%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A5%D9%83%D8%B3%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg">
-          استلم ملف الاختصارات مجاناً 📥
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
        Footer
        ========================================================================= -->
   <footer class="footer">
@@ -770,7 +1193,7 @@
           <ul class="footer-links">
             <li><a href="#hero">الرئيسية</a></li>
             <li><a href="#courses">الكورسات والمناهج</a></li>
-            <li><a href="#pricing">الأسعار وعرض الـ 40%</a></li>
+            <li><a href="#offers">عروض الأسعار والتخفيضات</a></li>
             <li><a href="#custom-sheets">تصميم أنظمة الإكسيل</a></li>
             <li><a href="#portal">قاعة المحاضرات للمشتركين</a></li>
           </ul>
@@ -808,8 +1231,81 @@
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
+  <!-- =========================================================================
+       VBA Genius Pro Activation Modal
+       ========================================================================= -->
+  <div class="vba-code-modal" id="vbaActivationModal">
+    <div class="vba-code-window" style="max-width: 520px; text-align: center; padding: 0;">
+      <div class="vba-code-header" style="justify-content: space-between;">
+        <h4 style="display: flex; align-items: center; gap: 8px;">🔑 تفعيل النسخة الكاملة لـ VBA Genius Pro</h4>
+        <button class="vba-code-close" onclick="closeVbaActivationModal()">&times;</button>
+      </div>
+      <div style="padding: 26px 22px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(245, 158, 11, 0.15); border: 2px solid #f59e0b; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 16px;">
+          👑
+        </div>
+        <h3 style="color: #fff; font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">أدخل كود التفعيل أو باسورد الكورس</h3>
+        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">
+          البرنامج متاح <strong>مجاناً مدى الحياة 100%</strong> لجميع المشتركين في أي من كورسات أ. أحمد علاء. أدخل باسورد كورس الإكسيل أو كود الترخيص لفتح النسخة الكاملة فوراً:
+        </p>
+
+        <div style="margin-bottom: 18px;">
+          <input type="text" id="vbaActivationKeyInput" placeholder="أدخل الكود (مثال: BEG2026 أو GENIUS-PRO)" style="width: 100%; padding: 13px 16px; border-radius: 12px; border: 1.5px solid rgba(245, 158, 11, 0.4); background: #070b12; color: #fff; font-size: 16px !important; text-align: center; font-weight: 700; letter-spacing: 1px; outline: none;">
+          <div id="vbaActivationError" style="color: #f87171; font-size: 0.85rem; margin-top: 6px; display: none;"></div>
+        </div>
+
+        <button onclick="submitVbaActivationKey()" class="btn btn-gold btn-block" style="width: 100%; padding: 12px; font-size: 1rem; margin-bottom: 12px;">
+          تفعيل النسخة غير المحدودة الآن ✨
+        </button>
+
+        <div style="display: flex; gap: 8px; justify-content: center;">
+          <a href="#courses" onclick="closeVbaActivationModal()" class="btn btn-secondary btn-sm" style="flex: 1; font-size: 0.82rem;">
+            🎁 اشترك واحصل عليه مجاناً
+          </a>
+          <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B4%D8%AA%D8%B1%D9%8A%20%D9%83%D9%88%D8%AF%20%D8%AA%D9%81%D8%B9%D9%8A%D9%84%20VBA%20Genius%20Pro" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex: 1; font-size: 0.82rem;">
+            💬 شراء كود التفعيل
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       VBA Genius Pro Trial Expired Modal
+       ========================================================================= -->
+  <div class="vba-code-modal" id="vbaTrialExpiredModal">
+    <div class="vba-code-window" style="max-width: 520px; text-align: center; padding: 0;">
+      <div class="vba-code-header" style="justify-content: space-between;">
+        <h4 style="display: flex; align-items: center; gap: 8px; color: #f87171;">🔒 انتهت المحاولات التجريبية المجانية</h4>
+        <button class="vba-code-close" onclick="closeVbaTrialExpiredModal()">&times;</button>
+      </div>
+      <div style="padding: 26px 22px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(239, 68, 68, 0.15); border: 2px solid #ef4444; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 16px;">
+          ⏳
+        </div>
+        <h3 style="color: #fff; font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">استهلكت جميع المحاولات المجانية</h3>
+        <p style="color: #94a3b8; font-size: 0.92rem; line-height: 1.6; margin-bottom: 22px;">
+          لقد قمت بتجربة الأكواد المتاحة للمعاينة. احصل الآن على <strong>البرنامج كاملاً وغير محدود مدى الحياة للكمبيوتر والموقع</strong>:
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#courses" onclick="closeVbaTrialExpiredModal()" class="btn btn-gold btn-block" style="padding: 12px; font-size: 0.96rem;">
+            🎁 اشترك بأي كورس واستلم البرنامج مجاناً 100%
+          </a>
+          <button onclick="closeVbaTrialExpiredModal(); openVbaActivationModal();" class="btn btn-secondary btn-block" style="padding: 11px; font-size: 0.92rem;">
+            🔑 لدي كود تفعيل (أدخل الكود)
+          </button>
+          <a href="https://wa.me/201002660066?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AC%D8%B1%D8%A8%D8%AA%20%D8%A7%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20%D9%88%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B4%D8%AA%D8%B1%D9%8A%20%D9%83%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D9%81%D8%B9%D9%8A%D9%84" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" style="padding: 11px; font-size: 0.92rem;">
+            💬 تواصل لشراء الترخيص المنفصل عبر واتساب
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- JavaScript Modules -->
   <script src="portal-config.js" onerror="this.onerror=null;var s=document.createElement('script');s.src='portal config.js';document.head.appendChild(s);"></script>
+  <script src="vba-genius-data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
